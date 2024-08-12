@@ -1,0 +1,108 @@
+.container {
+  background-color: var(--dark-green-color);
+  height: 100%;
+  width: 100%;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 56px;
+}
+
+.total {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.amountContainer {
+  width: 100%;
+  font-family: var(--space-mono-font-family);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.labelBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--container-bg-color);
+  letter-spacing: 0.088em;
+  font-weight: var(--normal-font-weight);
+  line-height: var(--line-height);
+  font-size: var(--label-font-size-XLS);
+}
+
+.subLabel {
+  color: var(--dark-grey-color);
+}
+
+.amountNumber {
+  width: 100%;
+  font-size: var(--total-amount-font-size-XLS);
+  font-weight: var(--bold-font-weight);
+  line-height: var(--line-height);
+  letter-spacing: 0rem;
+  text-align: right;
+  color: var(--light-green-color);
+  overflow-x: auto;
+}
+
+.amountNumber::-webkit-scrollbar {
+  display: none;
+}
+
+.btnContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* Laptop (LS) */
+@media (max-width: 1100px) {
+  .container {
+    padding: 3rem;
+  }
+
+  .labelBox {
+    font-size: var(--label-font-size-LS);
+  }
+
+  .amountNumber {
+    max-width: 150px;
+    font-size: var(--total-amount-font-size-LS);
+  }
+}
+
+/* Tablet (TS) */
+@media (max-width: 884px) {
+  .container {
+    padding: 2rem;
+    gap: 3.625rem;
+  }
+
+  .total {
+    gap: 3rem;
+  }
+
+  .labelBox {
+    font-size: var(--label-font-size-TS);
+  }
+
+  .amountNumber {
+    max-width: 150px;
+    font-size: var(--total-amount-font-size-TS);
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .total {
+    gap: 1.5rem;
+  }
+}

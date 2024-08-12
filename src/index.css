@@ -1,0 +1,117 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  width: auto;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+#root {
+  width: 100%;
+}
+
+@font-face {
+  font-family: "Space Mono";
+  src: url("./assets/spaceMonoFont/SpaceMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("./assets/spaceMonoFont/SpaceMono-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: bold;
+}
+
+:root {
+  --space-mono-font-family: "Space Mono";
+  --bold-font-weight: 700;
+  --normal-font-weight: 400;
+  --line-height: 1.5;
+  --app-font-size: 1.5rem;
+  --form-number-size-XLS: 2rem;
+  --form-number-size-LS: 1.5rem;
+  --form-number-size-TS: 1.4rem;
+  --error-msg-font-size-XLS: 0.875rem;
+  --error-msg-font-size-LS: 0.7rem;
+  --error-msg-font-size-TS: 0.65rem;
+  --label-font-size-XLS: 1.25rem;
+  --label-font-size-LS: 1rem;
+  --label-font-size-TS: 0.8rem;
+  --button-text-font-size-XLS: 1.5rem;
+  --button-text-font-size-LS: 1.25rem;
+  --button-text-font-size-TS: 1rem;
+  --total-amount-font-size-XLS: 3rem;
+  --total-amount-font-size-LS: 2.5rem;
+  --total-amount-font-size-TS: 1.8375rem;
+  --app-bg-color: #c5e4e7;
+  --container-bg-color: white;
+  --input-field-bg-color: #f3f8fb;
+  --error-color: #b57b6d;
+  --label-color: #5d6b6c;
+  --button-hover-color: #9fe8df;
+  --custom-tip-hover-color: #dce4ec;
+  --button-disabled-color: #0d686d;
+  --light-green-color: #2cc0ad;
+  --dark-green-color: #00474b;
+  --dark-grey-color: #9fb3b2;
+  --input-field-smooth-shadow: 0 8px 15px -3px #bdcccc;
+  --ease-out-transition: 0.2s ease-out;
+}

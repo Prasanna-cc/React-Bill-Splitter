@@ -1,0 +1,52 @@
+/* Base styling for the ResetButton component, including font, background color, border, padding, and text properties */
+.resetButton {
+  font-family: var(--space-mono-font-family);
+  background-color: var(--light-green-color);
+  border-radius: 7px;
+  width: 100%;
+  border: none;
+  padding: 13px 0;
+  font-weight: var(--bold-font-weight);
+  font-size: var(--button-text-font-size-XLS);
+  line-height: var(--line-height);
+  letter-spacing: 0.088em;
+  color: var(--dark-green-color);
+  cursor: pointer;
+}
+
+/* Styles applied to the button when hovered over, changing its background color */
+.resetButton:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* Focus styles for the button, adding an outline for accessibility */
+.resetButton:focus {
+  outline: 2px solid var(--container-bg-color);
+}
+
+/* Styles applied when the button is disabled, changing its background color and cursor */
+.resetButton:disabled {
+  background-color: var(--button-disabled-color);
+  cursor: not-allowed;
+}
+
+/* Responsive styles for laptops (LS) */
+@media (max-width: 1100px) {
+  .resetButton {
+    font-size: var(--button-text-font-size-LS);
+  }
+}
+
+/* Responsive styles for tablets (TS) */
+@media (max-width: 884px) {
+  .resetButton {
+    font-size: var(--button-text-font-size-TS);
+  }
+}
+
+/* Responsive styles for mobile devices (MS) */
+@media (max-width: 700px) {
+  .resetButton {
+    padding: 9px 0;
+  }
+}

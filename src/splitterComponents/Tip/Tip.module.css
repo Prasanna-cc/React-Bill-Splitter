@@ -1,0 +1,109 @@
+/* Base styling for tip buttons and custom tip input, including font, color, padding, and transition effects */
+.tipButton,
+.customTipButton,
+.customTipInput {
+  background-color: var(--dark-green-color);
+  color: var(--container-bg-color);
+  width: 100%;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--space-mono-font-family);
+  font-weight: var(--bold-font-weight);
+  letter-spacing: 0.088em;
+  font-size: var(--form-number-size-XLS);
+  line-height: var(--line-height);
+  text-align: center;
+  padding: 8px 8px;
+  border: none;
+  cursor: pointer;
+  transition:
+    background-color var(--ease-out-transition),
+    color var(--ease-out-transition);
+}
+
+/* Styling for tip buttons on hover, changing background and text color */
+.tipButton:hover {
+  background-color: var(--button-hover-color);
+  color: var(--dark-green-color);
+}
+
+/* Styling for selected tip buttons */
+.selectedTip {
+  background: var(--light-green-color);
+  color: var(--dark-green-color);
+}
+
+/* Styling for selected tip buttons on hover, maintaining the selected color */
+.selectedTip:hover {
+  background-color: var(--light-green-color);
+}
+
+/* Styling for custom tip buttons and inputs, including background color and font size */
+.customTipButton,
+.customTipInput {
+  padding: 8px 8px;
+  background-color: var(--input-field-bg-color);
+  font-size: var(--button-text-font-size-XLS);
+  line-height: var(--line-height);
+  color: var(--label-color);
+}
+
+/* Styling for custom tip buttons on hover */
+.customTipButton:hover {
+  background-color: var(--custom-tip-hover-color);
+}
+
+/* Hides elements with this class */
+.hide {
+  display: none;
+}
+
+/* Styling for custom tip inputs, including border, font size, and focus state */
+.customTipInput {
+  padding: 8px 8px;
+  width: calc(100% - 3px);
+  height: calc(100% - 3px);
+  font-size: var(--form-number-size-XLS);
+  line-height: var(--line-height);
+  color: var(--dark-green-color);
+  border: none;
+  outline: 3px solid transparent;
+}
+
+/* Focus state for custom tip inputs, changing the outline color */
+.customTipInput:focus {
+  outline: 3px solid var(--light-green-color);
+}
+
+/* Hide spin buttons in custom tip inputs */
+.customTipInput::-webkit-outer-spin-button,
+.customTipInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Responsive styles for laptops (LS) */
+@media (max-width: 1100px) {
+  .tipButton,
+  .customTipInput {
+    font-size: var(--form-number-size-LS);
+  }
+  .customTipButton {
+    font-size: var(--button-text-font-size-LS);
+  }
+}
+
+/* Responsive styles for tablets (TS) */
+@media (max-width: 884px) {
+  .tipButton,
+  .customTipButton,
+  .customTipInput {
+    font-size: var(--form-number-size-TS);
+    max-height: 3rem;
+  }
+  .customTipButton {
+    font-size: var(--button-text-font-size-TS);
+  }
+}

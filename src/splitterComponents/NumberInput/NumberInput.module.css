@@ -1,0 +1,129 @@
+/* Container for the entire input component, ensuring proper spacing and layout */
+.container {
+  font-family: var(--space-mono-font-family);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  line-height: var(--line-height);
+  overflow: visible;
+}
+
+/* Styles for the container that wraps the input field and icon */
+.inputContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--input-field-bg-color);
+  border-radius: 6px;
+  transition: box-shadow var(--ease-out-transition);
+}
+
+/* Adds a shadow effect when the input container is hovered over */
+.inputContainer:hover {
+  box-shadow: var(--input-field-smooth-shadow);
+}
+
+/* Adds an outline to the input container when number input is focused */
+.inputContainer:focus-within {
+  outline: 3px solid var(--light-green-color);
+}
+
+/* Adds an error outline to the input container when an error is present */
+.inputContainer.errorOutline {
+  outline: 3px solid var(--error-color);
+}
+
+/* Container for the icon within the input field */
+.iconContainer {
+  flex-shrink: 0;
+  display: flex;
+  padding: 8px 20px;
+  justify-content: center;
+}
+
+/* Styles for the number input field */
+.numberInput {
+  width: 100%;
+  flex: 2;
+  padding: 8px 20px 8px 0;
+  text-align: right;
+  background-color: var(--input-field-bg-color);
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: var(--form-number-size-XLS);
+  font-weight: var(--bold-font-weight);
+  color: var(--dark-green-color);
+}
+
+/* Styles for the placeholder text within the number input field */
+.numberInput::placeholder {
+  color: var(--dark-grey-color);
+}
+
+/* Removes the default spin buttons in number inputs for a cleaner look */
+.numberInput::-webkit-outer-spin-button,
+.numberInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Styles for the label text above the input field */
+.label,
+.errorMsg {
+  width: max-content;
+  font-size: var(--label-font-size-XLS);
+  font-weight: var(--bold-font-weight);
+  line-height: var(--line-height);
+  color: var(--label-color);
+  letter-spacing: 0.1em;
+}
+
+/* Styles for the error message displayed below the input field */
+.errorMsg {
+  min-height: 1rem;
+  color: var(--error-color);
+  width: 100%;
+  text-align: right;
+  line-height: 1.14;
+  font-size: var(--error-msg-font-size-XLS);
+}
+
+/* Responsive styles for laptops (LS) */
+@media (max-width: 1100px) {
+  .label {
+    font-size: var(--label-font-size-LS);
+  }
+  .errorMsg {
+    font-size: var(--error-msg-font-size-LS);
+  }
+  .numberInput {
+    font-size: var(--form-number-size-LS);
+  }
+}
+
+/* Responsive styles for tablets (TS) */
+@media (max-width: 884px) {
+  .label {
+    font-size: var(--label-font-size-TS);
+  }
+
+  .iconContainer {
+    padding: 6px 16px;
+  }
+
+  .numberInput {
+    padding: 6px 16px 6px 0;
+    font-size: var(--form-number-size-TS);
+  }
+
+  .container {
+    gap: 0.5rem;
+  }
+
+  .errorMsg {
+    min-height: 1rem;
+    font-size: var(--error-msg-font-size-TS);
+  }
+}

@@ -1,11 +1,10 @@
-import React from "react";
-import { useWindowSize } from "../src/customHooks/useWindowSize";
-import "../src/index.css";
 import type { Preview } from "@storybook/react";
 import {
   INITIAL_VIEWPORTS,
   MINIMAL_VIEWPORTS,
 } from "@storybook/addon-viewport";
+import "../src/tailwind.css";
+
 const preview: Preview = {
   parameters: {
     controls: {

@@ -1,0 +1,73 @@
+/* Container for the tip selection section, including overall layout and spacing */
+.container {
+  width: 100%;
+  font-family: var(--space-mono-font-family);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Heading for the tip section, with styling for font size, weight, line height, color, and letter spacing */
+.tipHeading {
+  font-size: var(--label-font-size-XLS);
+  font-weight: var(--bold-font-weight);
+  line-height: var(--line-height);
+  color: var(--label-color);
+  letter-spacing: 0.1em;
+}
+
+/* Grid layout for tip buttons, with a fixed number of columns and spacing */
+.tipGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(8.4375rem, 1fr));
+  gap: 1.5rem;
+}
+
+/* Responsive styles for laptop screens (LS) */
+@media (max-width: 1100px) {
+  /* Adjusts gap in the container for smaller screens */
+  .container {
+    gap: 1rem;
+  }
+
+  /* Reduces font size of the tip heading for better fit on smaller screens */
+  .tipHeading {
+    font-size: var(--label-font-size-LS);
+  }
+
+  /* Adjusts the grid layout for tip buttons for better responsiveness */
+  .tipGrid {
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+    gap: 1rem;
+  }
+}
+
+/* Responsive styles for tablet screens (TS) */
+@media (max-width: 884px) {
+  /* Further reduces gap in the container for even smaller screens */
+  .container {
+    gap: 0.75rem;
+  }
+
+  /* Further reduces font size of the tip heading */
+  .tipHeading {
+    font-size: var(--label-font-size-TS);
+  }
+
+  /* Adjusts the grid layout for tip buttons for tablet screens */
+  .tipGrid {
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+    gap: 0.5rem;
+  }
+}
+
+/* Responsive styles for mobile screens (MS) */
+@media (max-width: 700px) {
+  /* Adjusts grid layout for tip buttons for mobile screens */
+  .tipGrid {
+    margin-inline: auto;
+    grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+    gap: 1rem;
+  }
+}
